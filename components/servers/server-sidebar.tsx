@@ -30,7 +30,6 @@ const channelIconMap: ChannelIconMap = {
   [ChannelType.TEXT]: <Hash className="w-4 h-4 mr-2" />,
   [ChannelType.AUDIO]: <Mic className="w-4 h-4 mr-2" />,
   [ChannelType.VIDEO]: <Video className="w-4 h-4 mr-2" />,
-  [ChannelType.NEWS]: null,
 };
 
 const roleIconMap: MemberRoleIconMap = {

@@ -67,7 +67,7 @@ const EditChannelModal = () => {
       form.setValue("type", channel.type);
       form.setValue("name", channel.name);
     }
-  }, [channel]);
+  }, [channel, form]);
 
   const isLoading = form.formState.isSubmitting;
   const isModalOpen = isOpen && type === "editChannel";

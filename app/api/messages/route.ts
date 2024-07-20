@@ -6,8 +6,8 @@ import { NextResponse } from "next/server";
 const MESSAGE_BATCH_SIZE = 10;
 
 export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
   try {
-    const { searchParams } = new URL(req.url);
     const channelId = searchParams.get("channelId");
     const cursor = searchParams.get("cursor");
 

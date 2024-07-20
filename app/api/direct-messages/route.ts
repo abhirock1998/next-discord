@@ -1,13 +1,13 @@
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
-import { DirectMessage, Message } from "@prisma/client";
+import { DirectMessage } from "@prisma/client";
 import { NextResponse } from "next/server";
 
 const MESSAGE_BATCH_SIZE = 10;
 
 export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
   try {
-    const { searchParams } = new URL(req.url);
     const conversationId = searchParams.get("conversationId");
     const cursor = searchParams.get("cursor");
 

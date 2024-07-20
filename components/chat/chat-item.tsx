@@ -79,7 +79,7 @@ const ChatItem = ({
     form.reset({
       content: message.content,
     });
-  }, [message.content]);
+  }, [message.content, form]);
 
   const roleIcon = roleIconMap[message.member.role];
   const isAdmin = member.role === MemberRole.ADMIN;

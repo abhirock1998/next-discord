@@ -59,7 +59,7 @@ const EditServerModal = () => {
       form.setValue("name", server.name);
       form.setValue("imageUrl", server.imageUrl);
     }
-  }, [server]);
+  }, [server, form]);
 
   const onSubmit = async (values: zod.infer<typeof formSchema>) => {
     try {

@@ -42,7 +42,7 @@ export default function MediaRoom({ audio, chatId, video }: MediaRoomProps) {
         console.error(e);
       }
     })();
-  }, [user?.lastName, user?.firstName]);
+  }, [user?.lastName, user?.firstName, chatId]);
 
   if (token === "") {
     return (

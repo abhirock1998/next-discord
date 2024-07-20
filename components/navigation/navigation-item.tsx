@@ -14,11 +14,13 @@ interface NavigationItemProps {
 
 const NavigationItem = ({ id, name, imageUrl }: NavigationItemProps) => {
   const router = useRouter();
-  const { serverId } = useParams();
+  const params = useParams();
 
   const handleClick = () => {
     router.push(`/servers/${id}`);
   };
+
+  const serverId = params?.serverId || "";
 
   return (
     <ActionTooltip label={name} align="center" side="right">
